@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
+
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [nav,setNav] = useState(false);
 
@@ -12,11 +14,11 @@ const Navbar = () => {
       
         <h1 className='w-full text-3xl font-bold text-[#4fffb3]'>secureX.</h1>
         <ul className='hidden md:flex'>
-          <li className='p-4'>Home</li>
-          <li className='p-4'>Company</li>
-          <li className='p-4'>Resources</li>
-          <li className='p-4'>About</li>
-          <li className='p-4'>Contact</li>
+          <Link className='p-4' to='/securex'>Home</Link>
+          <Link className='p-4' to='/securex/company'>Company</Link>
+          <Link className='p-4' to='/securex/dataanalytics'>Resources</Link>
+          <Link className='p-4' to='/securex/about'>About</Link>
+          <Link className='p-4' to='/securex/contact'>Contact</Link>
         </ul>
 
         <div onClick={handleNav} className='block md:hidden'>
