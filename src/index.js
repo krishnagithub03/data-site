@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter, useLocation } from "react-router-d
 import Analytics from "./components/Analytics";
 import Footer from "./components/Footer";
 import Signup from "./components/Signup";
+import Dashboard from "./components/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -17,9 +18,8 @@ const router = createBrowserRouter([
         element: <Signup/>
     },
     {
-        path: '/securex/*',
-        element: <div>404 Not Found</div>
-    
+        path:'/securex/dashboard',
+        element: <Dashboard />
     }
 ]
 );
